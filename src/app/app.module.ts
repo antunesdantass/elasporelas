@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CourseListComponent } from '../pages/course-list/course-list.component';
+import { CourseDetail } from '../pages/course/course.page';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,7 +17,8 @@ import { CourseProvider } from '../providers/course/course-provider';
     MyApp,
     HomePage,
     TabsPage,
-    CourseListComponent
+    CourseListComponent,
+    CourseDetail
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { CourseProvider } from '../providers/course/course-provider';
     MyApp,
     HomePage,
     TabsPage,
-    CourseListComponent
+    CourseListComponent,
+    CourseDetail
   ],
   providers: [
     StatusBar,

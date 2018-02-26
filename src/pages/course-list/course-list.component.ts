@@ -3,6 +3,7 @@ import { CourseComponent } from '../../components/course/course.component';
 import { NavController } from 'ionic-angular';
 import { Course } from '../../models/course';
 import { CourseProvider } from '../../providers/course/course-provider';
+import { CourseDetail } from '../course/course.page';
 
 @Component({
     templateUrl: './course-list.html'
@@ -18,7 +19,7 @@ export class CourseListComponent implements OnInit {
         });
     };
 
-    goToCourse(id: any): void {
-        console.log(id);
+    goToCourse(course: Course): void {
+        this.navCtrl.push(CourseDetail, {course: course});
     }
 }

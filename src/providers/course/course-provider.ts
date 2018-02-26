@@ -16,16 +16,22 @@ export class CourseProvider {
         const informatica = new Course();
         informatica.nome = "Informática";
         informatica.valor = 50;
+        informatica.imagem = "../../assets/imgs/informatica.jpg";
+        informatica.teacher = "Gilza";
 
         const cabeleleira = new Course();
         cabeleleira.nome = "Cabelereira";
         cabeleleira.valor = 20;
+        cabeleleira.imagem = "../../assets/imgs/cabelereira.jpg";
+        cabeleleira.teacher = "Maria";
 
-        const encanadora = new Course();
-        encanadora.nome = "Encanadora";
-        encanadora.valor = 25;
+        const culinaria = new Course();
+        culinaria.nome = "Encanadora";
+        culinaria.valor = 25;
+        culinaria.imagem = "../../assets/imgs/culinaria.jpg";
+        culinaria.teacher = "Elaine";
 
-        return [informatica, cabeleleira, encanadora];
+        return [informatica, cabeleleira, culinaria];
     }
 
 }
