@@ -7,10 +7,12 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CourseListComponent } from '../pages/course-list/course-list.component';
 import { CourseDetail } from '../pages/course/course.page';
+import { LoginPage } from "../pages/login/login.page"; 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { CourseProvider } from '../providers/course/course-provider';
+import { LoginProvider } from "../providers/authentication/login.provider";
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { CourseProvider } from '../providers/course/course-provider';
     HomePage,
     TabsPage,
     CourseListComponent,
+    LoginPage,
     CourseDetail
   ],
   imports: [
@@ -30,13 +33,15 @@ import { CourseProvider } from '../providers/course/course-provider';
     HomePage,
     TabsPage,
     CourseListComponent,
-    CourseDetail
+    CourseDetail,
+    LoginPage
   ],
   providers: [
+    LoginProvider,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CourseProvider
-  ]
+    ]
 })
 export class AppModule {}
