@@ -21,5 +21,11 @@ export class CourseListComponent implements OnInit {
 
     goToCourse(course: Course): void {
         this.navCtrl.push(CourseDetail, {course: course});
+    };
+
+    ionViewWillEnter() {
+        this.courseProvider.getCourses().then(data => this.courses = data)
     }
+
+
 }

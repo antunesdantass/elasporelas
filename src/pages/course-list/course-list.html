@@ -1,20 +1,25 @@
-<ion-list>
-    <ion-item *ngFor="let course of courses" class="estilo-azul">
-        <ion-grid (click)="goToCourse(course)">
-            <ion-row>
-                <ion-col col-6>
-                    <ion-row>
-                        <h1>{{course.nome}}</h1>
-                        <sub>{{course.teacher}}</sub>
-                    </ion-row>
-                    <ion-row float-left style="padding-top:60px">
-                        <h3>R$ {{course.valor}} reais</h3>
-                    </ion-row>
-                </ion-col>
-                <ion-col col-6>
-                    <img src={{course.imagem}}>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </ion-item>
-</ion-list>
+<ion-content style="background-image:url(./assets/imgs/background.png)">
+    <ion-list>
+        <ion-item *ngFor="let course of courses" class="estilo-azul">
+            <ion-grid (click)="goToCourse(course)">
+                <ion-row>
+                    <ion-col col-6>
+                        <ion-row>
+                            <h1>{{course.nome}}</h1>
+                        </ion-row>
+                        <ion-row>
+                            <sub>{{course.teacher}}</sub>
+                        </ion-row>
+                        <ion-row float-left style="padding-top:60px">
+                            <h3>R$ {{course.valor}} reais</h3>
+                        </ion-row>
+                    </ion-col>
+                    <ion-col col-6>
+                        <img src={{course.imagem}}>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-item>
+    </ion-list>
+</ion-content>
+

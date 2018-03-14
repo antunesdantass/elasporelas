@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Registrar-se</ion-title>
+    </ion-navbar>
+</ion-header>
+  
+<ion-content style="background-image:url(./assets/imgs/background.png)">
+    <form (submit)="processForm()" [formGroup]="form" style="opacity:0.8">
+        <ion-list>
+            
+            <div (click)="getPicture()" text-center>
+                <ion-card class="estilo-azul">
+                    <img *ngIf="picture !== undefined" src={{picture}}/>
+                    <h1>Adicionar Foto</h1>
+                </ion-card>
+            </div>
+
+            <ion-item>
+                <ion-input formControlName="name" type="text" placeholder="Primeiro Nome"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-input formControlName="lastname" type="text" placeholder="Sobrenome"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                    <ion-input formControlName="email" type="text" placeholder="Email"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                    <ion-input formControlName="password" type="text" placeholder="Senha"></ion-input>
+            </ion-item>
+
+        </ion-list>
+        <div padding>
+            <button ion-button block type="submit">Registrar-se</button>
+        </div>
+    </form>
+</ion-content>

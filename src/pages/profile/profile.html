@@ -1,1 +1,16 @@
-<h1>profile</h1>
+<ion-content style="background-image:url(./assets/imgs/background.png)">
+    <ion-card>
+        <img src={{loggedUser.imagem}}/>
+        <ion-card-content>
+            <ion-card-title>
+            {{loggedUser.name}} {{loggedUser.lastname}}
+            </ion-card-title>
+            <p>
+            {{loggedUser.email}}
+            </p>
+        </ion-card-content>
+    </ion-card>
+    <div text-center>
+        <button ion-button (click)="logout()"> Logout </button>
+    </div>
+</ion-content>

@@ -1,1 +1,33 @@
-<h1>olar</h1>
+<ion-content style="background-image:url(./assets/imgs/background.png)">
+    <form (submit)="processForm()" [formGroup]="form" style="opacity:0.8">
+            <ion-list>
+
+                <div (click)="getPicture()" text-center>
+                    <ion-card class="estilo-azul">
+                        <img *ngIf="picture !== undefined" src={{picture}}/>
+                        <h1>Adicionar Foto</h1>
+                    </ion-card>
+                </div>
+    
+                <ion-item>
+                    <ion-input formControlName="nome" type="text" placeholder="Nome do Curso"></ion-input>
+                </ion-item>
+    
+                <ion-item>
+                    <ion-input formControlName="descricao" type="text" placeholder="Descrição"></ion-input>
+                </ion-item>
+    
+                <ion-item>
+                        <ion-input formControlName="endereco" type="text" placeholder="Endereço do Curso"></ion-input>
+                </ion-item>
+    
+                <ion-item>
+                        <ion-input formControlName="valor" type="text" placeholder="Preço"></ion-input>
+                </ion-item>
+    
+            </ion-list>
+            <div padding>
+                <button ion-button block type="submit">Cadastrar Curso</button>
+            </div>
+        </form>
+</ion-content>

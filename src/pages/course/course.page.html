@@ -1,35 +1,37 @@
-<div>
-    <ion-row>
-        <ion-card class="estilo-azul">
-            <img src={{course.imagem}}/>
-            <ion-card-content>
-                <ion-card-title>
-                {{course.nome}}
-                </ion-card-title>
-                <p>
-                R$ {{course.valor}} reais
-                </p>
-            </ion-card-content>
-        </ion-card>
-    </ion-row>
-    <ion-row>
-        <ion-card class="estilo-azul">
-            <ion-card-content>
-                {{course.description}} descricao
-                {{course.adress}} endereço
-            </ion-card-content>
-        </ion-card>
-    </ion-row>
-    <ion-row>
-        <ion-card class="estilo-azul">
-            <ion-card-content>
+<ion-content style="background-image:url(./assets/imgs/background.png)">
+    <div>
+        <ion-row>
+            <ion-card class="estilo-azul">
+                <img src={{course.imagem}}/>
+                <ion-card-content>
+                    <ion-card-title>
+                    {{course.nome}}
+                    </ion-card-title>
+                    <p>
+                    R$ {{course.valor}} reais
+                    </p>
+                </ion-card-content>
+            </ion-card>
+        </ion-row>
+        <ion-row>
+            <ion-card class="estilo-azul">
+                <ion-card-content>
+                    {{course.descricao}}
+                    {{course.endereco}}
+                </ion-card-content>
+            </ion-card>
+        </ion-row>
+        <ion-row>
+            <ion-card class="estilo-azul">
+                <ion-card-content>
+                    <div text-center>
+                        {{course.matriculas.length}} alunas
+                    </div>
+                </ion-card-content>
                 <div text-center>
-                    {{course.matriculas.length}} alunas
+                    <button ion-button>Matricular-se</button>
                 </div>
-            </ion-card-content>
-            <div text-center>
-                <button ion-button>Matricular-se</button>
-            </div>
-        </ion-card>
-    </ion-row>
-</div>
+            </ion-card>
+        </ion-row>
+    </div>
+</ion-content>
