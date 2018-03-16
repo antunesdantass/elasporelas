@@ -10,6 +10,7 @@ import { CourseDetail } from '../pages/course/course.page';
 import { LoginPage } from "../pages/login/login.page";
 import { Register } from '../pages/register/register.page';
 import { CreateCourse } from '../pages/create-course/create-course.page';
+import { MyCoursesPage } from '../pages/my-courses/my-courses.page';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,7 +27,8 @@ import { Profile } from '../pages/profile/profile.component';
     CourseDetail,
     Register,
     Profile,
-    CreateCourse
+    CreateCourse,
+    MyCoursesPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { Profile } from '../pages/profile/profile.component';
     LoginPage,
     Register,
     Profile,
-    CreateCourse
+    CreateCourse,
+    MyCoursesPage
   ],
   providers: [
     LoginProvider,

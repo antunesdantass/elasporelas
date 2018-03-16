@@ -1,3 +1,8 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Curso</ion-title>
+    </ion-navbar>
+</ion-header>
 <ion-content style="background-image:url(./assets/imgs/background.png)">
     <div>
         <ion-row>
@@ -29,7 +34,7 @@
                     </div>
                 </ion-card-content>
                 <div text-center>
-                    <button ion-button>Matricular-se</button>
+                    <button (click)="matricular(course)" ion-button>Matricular-se</button>
                 </div>
             </ion-card>
         </ion-row>

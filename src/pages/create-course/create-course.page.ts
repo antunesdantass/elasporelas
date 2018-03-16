@@ -54,7 +54,7 @@ export class CreateCourse {
             curso.descricao = this.form.value.descricao;
             curso.endereco = this.form.value.endereco;
             curso.valor = this.form.value.valor;
-            curso.teacher = teacher.name;
+            curso.teacher = teacher.email;
             curso.imagem = this.picture;
             this.courseProvider.addCourse(curso);
             this.picture = undefined;
